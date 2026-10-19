@@ -1,0 +1,56 @@
+{
+  "config": {
+    "abort": {
+      "no_home": "No home coordinates are set in the Home Assistant configuration"
+    },
+    "error": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_service%]"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "elevation": "[%key:common::config_flow::data::elevation%]",
+          "latitude": "[%key:common::config_flow::data::latitude%]",
+          "longitude": "[%key:common::config_flow::data::longitude%]",
+          "name": "[%key:common::config_flow::data::name%]",
+          "temperature_entity": "Custom temperature sensor (optional)",
+          "humidity_entity": "Custom humidity sensor (optional)",
+          "pressure_entity": "Custom pressure sensor (optional)"
+        },
+        "data_description": {
+          "temperature_entity": "If set, this sensor's value replaces the current temperature from Met.no. Forecasts are unaffected.",
+          "humidity_entity": "If set, this sensor's value replaces the current humidity from Met.no. Forecasts are unaffected.",
+          "pressure_entity": "If set, this sensor's value replaces the current pressure from Met.no. Forecasts are unaffected."
+        },
+        "description": "Meteorologisk institutt",
+        "title": "[%key:common::config_flow::data::location%]"
+      }
+    }
+  },
+  "exceptions": {
+    "update_failed": {
+      "message": "Update of data from the web site failed: {error}"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "elevation": "[%key:common::config_flow::data::elevation%]",
+          "latitude": "[%key:common::config_flow::data::latitude%]",
+          "longitude": "[%key:common::config_flow::data::longitude%]",
+          "name": "[%key:common::config_flow::data::name%]",
+          "temperature_entity": "Custom temperature sensor (optional)",
+          "humidity_entity": "Custom humidity sensor (optional)",
+          "pressure_entity": "Custom pressure sensor (optional)"
+        },
+        "data_description": {
+          "temperature_entity": "If set, this sensor's value replaces the current temperature from Met.no. Forecasts are unaffected.",
+          "humidity_entity": "If set, this sensor's value replaces the current humidity from Met.no. Forecasts are unaffected.",
+          "pressure_entity": "If set, this sensor's value replaces the current pressure from Met.no. Forecasts are unaffected."
+        },
+        "title": "[%key:common::config_flow::data::location%]"
+      }
+    }
+  }
+}
